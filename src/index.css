@@ -163,9 +163,40 @@ ul {
 }
 
 .hero-content {
-  max-width: 900px;
+  max-width: 1080px;
   margin: 0 auto;
-  padding: 80px 24px 96px;
+  padding: 64px 24px 96px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.hero-copy {
+  flex: 1 1 480px;
+  min-width: 0;
+}
+
+.hero-visual {
+  flex: 0 1 360px;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 1 / 1;
+  margin-left: auto;
+}
+
+.hero-visual-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 860px) {
+  .hero-content {
+    flex-direction: column;
+  }
+
+  .hero-visual {
+    display: none;
+  }
 }
 
 @keyframes hero-in {
@@ -401,6 +432,53 @@ ul {
   font-size: 13.5px;
   color: var(--accent-2);
   min-height: 20px;
+}
+
+/* Carousel */
+
+.carousel-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.carousel-tab {
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.carousel-tab:hover {
+  color: var(--text);
+}
+
+.carousel-tab.is-active {
+  border-color: var(--accent);
+  color: var(--text);
+  background: rgba(124, 92, 255, 0.14);
+}
+
+.carousel-viewport {
+  display: grid;
+}
+
+.carousel-pane {
+  grid-area: 1 / 1;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.carousel-pane.is-active {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* BPMN diagram */

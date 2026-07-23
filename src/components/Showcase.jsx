@@ -1,8 +1,7 @@
 import { Suspense, lazy } from 'react'
-import BpmnDemo from './showcase/BpmnDemo'
+import DemoCarousel from './showcase/DemoCarousel'
 import Reveal from './Reveal'
 
-const ProcessImpactChart = lazy(() => import('./showcase/ProcessImpactChart'))
 const GraphicsDemo = lazy(() => import('./showcase/GraphicsDemo'))
 
 function DemoFallback() {
@@ -22,14 +21,9 @@ function Showcase() {
 
       <div className="demo-stack">
         <Reveal>
-          <BpmnDemo />
+          <DemoCarousel />
         </Reveal>
         <Reveal delay={80}>
-          <Suspense fallback={<DemoFallback />}>
-            <ProcessImpactChart />
-          </Suspense>
-        </Reveal>
-        <Reveal delay={160}>
           <Suspense fallback={<DemoFallback />}>
             <GraphicsDemo />
           </Suspense>

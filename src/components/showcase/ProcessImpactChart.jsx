@@ -2,20 +2,19 @@ import { useEffect, useRef, useState } from 'react'
 import * as d3 from 'd3'
 
 const DATA = [
-  { stage: 'Manual Process', days: 5 },
-  { stage: 'Digitized Forms', days: 3 },
-  { stage: 'BPMN Automation', days: 1 },
-  { stage: 'AI-Assisted Automation', days: 0.3 },
+  { stage: 'Manual Handoffs', days: 12 },
+  { stage: 'Structured Process', days: 6 },
+  { stage: 'Automated CI/CD', days: 2 },
+  { stage: 'AI-Assisted Delivery', days: 0.5 },
 ]
 
 const WIDTH = 720
 const HEIGHT = 320
 const MARGIN = { top: 30, right: 24, bottom: 56, left: 44 }
 
-function ProcessImpactChart() {
+function ProcessImpactChart({ playToken = 0 }) {
   const svgRef = useRef(null)
   const [tooltip, setTooltip] = useState(null)
-  const [replayKey, setReplayKey] = useState(0)
 
   useEffect(() => {
     const svg = d3.select(svgRef.current)
@@ -122,16 +121,16 @@ function ProcessImpactChart() {
         d3.select(this).transition().duration(150).attr('r', 5.5)
         setTooltip(null)
       })
-  }, [replayKey])
+  }, [playToken])
 
   return (
-    <div className="demo-card">
+    <div className="carousel-slide">
       <div className="demo-card-head">
-        <h3>Process Impact — D3.js</h3>
+        <h3>SLA Delivery Time — D3.js</h3>
         <p>
-          Average leave-request processing time as the process I diagrammed
-          above matures from a manual paper trail to an AI-assisted workflow.
-          Hover the points for exact values.
+          Average time from requirement to shipped feature as the process
+          above matures from manual handoffs to AI-assisted delivery. Hover
+          the points for exact values.
         </p>
       </div>
 
@@ -141,7 +140,7 @@ function ProcessImpactChart() {
           viewBox={`0 0 ${WIDTH} ${HEIGHT}`}
           className="chart-svg"
           role="img"
-          aria-label="Line chart of leave-request processing time improving across four automation stages"
+          aria-label="Line chart of feature delivery time improving across four process maturity stages"
         />
         {tooltip && (
           <div className="chart-tooltip" style={{ left: tooltip.x, top: tooltip.y }}>
@@ -150,12 +149,6 @@ function ProcessImpactChart() {
             {tooltip.value} day{tooltip.value === 1 ? '' : 's'}
           </div>
         )}
-      </div>
-
-      <div className="demo-controls">
-        <button type="button" className="btn btn-outline" onClick={() => setReplayKey((k) => k + 1)}>
-          Replay animation
-        </button>
       </div>
     </div>
   )

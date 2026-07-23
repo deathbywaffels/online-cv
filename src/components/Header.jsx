@@ -1,4 +1,7 @@
+import { Suspense, lazy } from 'react'
 import { profile } from '../data/cv'
+
+const HeroVisual = lazy(() => import('./HeroVisual'))
 
 const navLinks = [
   { href: '#summary', label: 'About' },
@@ -33,32 +36,40 @@ function Header() {
       </nav>
 
       <div className="hero-content">
-        <p className="eyebrow">Hello, I'm</p>
-        <h1>{profile.name}</h1>
-        <p className="hero-title">{profile.title}</p>
-        <p className="hero-location">
-          {profile.location} · {profile.workAuth}
-        </p>
+        <div className="hero-copy">
+          <p className="eyebrow">Hello, I'm</p>
+          <h1>{profile.name}</h1>
+          <p className="hero-title">{profile.title}</p>
+          <p className="hero-location">
+            {profile.location} · {profile.workAuth}
+          </p>
 
-        <div className="hero-actions">
-          <button
-            type="button"
-            className="btn btn-primary"
-            onClick={handleDownload}
-          >
-            Download Résumé
-          </button>
-          <a className="btn btn-outline" href={`mailto:${profile.email}`}>
-            Email Me
-          </a>
-          <a
-            className="btn btn-outline"
-            href={profile.linkedin}
-            target="_blank"
-            rel="noreferrer"
-          >
-            LinkedIn
-          </a>
+          <div className="hero-actions">
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={handleDownload}
+            >
+              Download Résumé
+            </button>
+            <a className="btn btn-outline" href={`mailto:${profile.email}`}>
+              Email Me
+            </a>
+            <a
+              className="btn btn-outline"
+              href={profile.linkedin}
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <div className="hero-visual">
+          <Suspense fallback={null}>
+            <HeroVisual />
+          </Suspense>
         </div>
       </div>
     </header>

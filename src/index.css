@@ -475,13 +475,15 @@ ul {
 }
 
 .bpmn-task.is-active.is-good,
-.bpmn-event.is-active.is-good {
+.bpmn-event.is-active.is-good,
+.bpmn-gateway.is-active.is-good {
   stroke: var(--good);
   filter: drop-shadow(0 0 8px rgba(61, 220, 151, 0.35));
 }
 
 .bpmn-task.is-active.is-bad,
-.bpmn-event.is-active.is-bad {
+.bpmn-event.is-active.is-bad,
+.bpmn-gateway.is-active.is-bad {
   stroke: var(--bad);
   filter: drop-shadow(0 0 8px rgba(255, 107, 122, 0.35));
 }

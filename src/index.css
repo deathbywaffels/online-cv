@@ -956,11 +956,14 @@ ul {
   --ink: #18181f;
   --ink-muted: #58586a;
   --print-accent: #5b3fd6;
-  --print-rule: #e3e1ec;
+  --print-rule: #c9c6d8;
   font-family: var(--sans);
   color: var(--ink);
   max-width: 780px;
   margin: 0 auto;
+  border: 1px solid var(--print-rule);
+  border-radius: 8px;
+  padding: 28px 32px;
 }
 
 .resume-head {

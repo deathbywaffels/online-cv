@@ -1,25 +1,15 @@
 export const profile = {
   name: 'Madelein Jordaan',
-  title: 'Technical Engineer & AI Integration Specialist',
+  title: 'Front-End Engineer & Process Automation Specialist',
   location: 'Mellieħa, Malta',
   workAuth: 'Authorized to work in Malta (Single Permit holder)',
   email: 'madeleinjordaan92@gmail.com',
   linkedin: 'https://www.linkedin.com/in/madelein-jordaan-6b7757218',
   summary:
-    "Highly adaptable, analytical, and execution-focused Technical Engineer specializing in AI Integration, Workflow Automation, and Full-Stack Engineering. Proven track record of bridging high-level business strategy with robust technical execution — designing structured multi-step AI agents, orchestrating complex BPMN 2.0 architectures, and optimizing high-performance frontend applications.",
+    "Highly adaptable, analytical, and execution-focused engineer specializing in Front-End Development and Business Process Automation. Proven track record of bridging high-level business strategy with robust technical execution — orchestrating complex BPMN 2.0 architectures, building high-performance React applications, and using modern AI tooling to accelerate delivery.",
 }
 
 export const skillGroups = [
-  {
-    title: 'AI & Agentic Engineering',
-    skills: [
-      'LLM Orchestration & Schema Enforcement',
-      'Context Window Management',
-      'Autonomous Multi-step Agent Pipelines',
-      'Claude Code, Gemini API & GPT ecosystems',
-      'API Tool-Calling & Dynamic Fallback Systems',
-    ],
-  },
   {
     title: 'Process Automation & Backend',
     skills: [
@@ -38,6 +28,14 @@ export const skillGroups = [
       '3D Graphics (WebGL, Three.js)',
       'Data Visualization (D3.js, Chart.js, ApexCharts, Grafana)',
       'Desktop UI Layout (Qt Designer)',
+    ],
+  },
+  {
+    title: 'AI-Assisted Development',
+    skills: [
+      'Claude Code, ChatGPT & Gemini as daily development tools',
+      'Prompt engineering for faster prototyping & debugging',
+      'AI-assisted code generation & review',
     ],
   },
   {

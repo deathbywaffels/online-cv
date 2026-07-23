@@ -1,12 +1,12 @@
 export const profile = {
   name: 'Madelein Jordaan',
-  title: 'Front-End Engineer & Process Automation Specialist',
+  title: 'Front-End Engineer, Process Automation & AI Integration',
   location: 'Mellieħa, Malta',
   workAuth: 'Authorized to work in Malta (Single Permit holder)',
   email: 'madeleinjordaan92@gmail.com',
   linkedin: 'https://www.linkedin.com/in/madelein-jordaan-6b7757218',
   summary:
-    "Highly adaptable, analytical, and execution-focused engineer specializing in Front-End Development and Business Process Automation. Proven track record of bridging high-level business strategy with robust technical execution — orchestrating complex BPMN 2.0 architectures, building high-performance React applications, and using modern AI tooling to accelerate delivery.",
+    "Highly adaptable, analytical, and execution-focused engineer specializing in Front-End Development, Business Process Automation, and AI Integration. Proven track record of bridging high-level business strategy with robust technical execution — orchestrating complex BPMN 2.0 architectures, building high-performance React applications, and developing custom AI agents and proof-of-concept tools that extend team capacity and demonstrate automation opportunities to clients.",
 }
 
 export const skillGroups = [
@@ -31,11 +31,12 @@ export const skillGroups = [
     ],
   },
   {
-    title: 'AI-Assisted Development',
+    title: 'AI Integration & Automation',
     skills: [
-      'Claude Code, ChatGPT & Gemini as daily development tools',
-      'Prompt engineering for faster prototyping & debugging',
-      'AI-assisted code generation & review',
+      'Custom Claude agents for QA, evaluation & ticket automation',
+      'LLM API integration (bring-your-own-API-key architecture)',
+      'AI proof-of-concept development for enterprise clients',
+      'Personal project: AI-powered job-matching tool with CV parsing (bring-your-own-API-key architecture)',
     ],
   },
   {
@@ -62,6 +63,8 @@ export const experience = [
       'Profile front-end performance metrics, reducing bundle sizes, managing asynchronous states, and resolving rendering bottlenecks.',
       'Author internal technical documentation for frontend components, modular design patterns, and state-management schemas.',
       'Manage code branches, continuous integration, and peer code reviews inside GitLab.',
+      'Build custom Claude-based agents to automate QA, evaluation, and ticket-creation workflows, extending team capacity.',
+      'Deliver AI proof-of-concept demos for clients — including an AI-driven energy-cost-reduction analysis — to support solution scoping.',
     ],
   },
   {

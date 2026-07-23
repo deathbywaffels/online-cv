@@ -20,14 +20,16 @@ function Header() {
   return (
     <header className="hero">
       <nav className="nav">
-        <span className="nav-brand">MJ</span>
-        <ul className="nav-links">
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <a href={link.href}>{link.label}</a>
-            </li>
-          ))}
-        </ul>
+        <div className="nav-inner">
+          <span className="nav-brand">MJ</span>
+          <ul className="nav-links">
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <a href={link.href}>{link.label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </nav>
 
       <div className="hero-content">

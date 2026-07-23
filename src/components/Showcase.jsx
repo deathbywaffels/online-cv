@@ -1,5 +1,6 @@
 import { Suspense, lazy } from 'react'
 import BpmnDemo from './showcase/BpmnDemo'
+import Reveal from './Reveal'
 
 const ProcessImpactChart = lazy(() => import('./showcase/ProcessImpactChart'))
 const GraphicsDemo = lazy(() => import('./showcase/GraphicsDemo'))
@@ -11,22 +12,28 @@ function DemoFallback() {
 function Showcase() {
   return (
     <section id="showcase" className="section">
-      <h2 className="section-title">
+      <Reveal as="h2" className="section-title">
         <span className="section-index">03</span> Skills in Action
-      </h2>
-      <p className="section-intro">
+      </Reveal>
+      <Reveal as="p" className="section-intro">
         A CV is a list of claims. These are small, interactive proofs, built
         with the same tools listed above.
-      </p>
+      </Reveal>
 
       <div className="demo-stack">
-        <BpmnDemo />
-        <Suspense fallback={<DemoFallback />}>
-          <ProcessImpactChart />
-        </Suspense>
-        <Suspense fallback={<DemoFallback />}>
-          <GraphicsDemo />
-        </Suspense>
+        <Reveal>
+          <BpmnDemo />
+        </Reveal>
+        <Reveal delay={80}>
+          <Suspense fallback={<DemoFallback />}>
+            <ProcessImpactChart />
+          </Suspense>
+        </Reveal>
+        <Reveal delay={160}>
+          <Suspense fallback={<DemoFallback />}>
+            <GraphicsDemo />
+          </Suspense>
+        </Reveal>
       </div>
     </section>
   )

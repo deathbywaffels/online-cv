@@ -1,17 +1,18 @@
 import { achievements } from '../data/cv'
+import Reveal from './Reveal'
 
 function Achievements() {
   return (
     <section id="achievements" className="section">
-      <h2 className="section-title">
+      <Reveal as="h2" className="section-title">
         <span className="section-index">06</span> Achievements
-      </h2>
+      </Reveal>
       <div className="achievements-grid">
-        {achievements.map((item) => (
-          <article className="achievement-card" key={item.title}>
+        {achievements.map((item, i) => (
+          <Reveal key={item.title} as="article" className="achievement-card" delay={i * 80}>
             <h3>{item.title}</h3>
             <p>{item.description}</p>
-          </article>
+          </Reveal>
         ))}
       </div>
     </section>

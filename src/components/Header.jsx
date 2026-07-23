@@ -3,10 +3,18 @@ import { profile } from '../data/cv'
 const navLinks = [
   { href: '#summary', label: 'About' },
   { href: '#skills', label: 'Skills' },
+  { href: '#showcase', label: 'Skills in Action' },
   { href: '#experience', label: 'Experience' },
   { href: '#education', label: 'Education' },
   { href: '#achievements', label: 'Achievements' },
 ]
+
+function handleDownload() {
+  const previousTitle = document.title
+  document.title = 'Madelein-Jordaan-Resume'
+  window.print()
+  document.title = previousTitle
+}
 
 function Header() {
   return (
@@ -31,9 +39,13 @@ function Header() {
         </p>
 
         <div className="hero-actions">
-          <a className="btn btn-primary" href={profile.resumeUrl} download>
+          <button
+            type="button"
+            className="btn btn-primary"
+            onClick={handleDownload}
+          >
             Download Résumé
-          </a>
+          </button>
           <a className="btn btn-outline" href={`mailto:${profile.email}`}>
             Email Me
           </a>

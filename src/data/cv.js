@@ -5,7 +5,6 @@ export const profile = {
   workAuth: 'Authorized to work in Malta (Single Permit holder)',
   email: 'madeleinjordaan92@gmail.com',
   linkedin: 'https://www.linkedin.com/in/madelein-jordaan-6b7757218',
-  resumeUrl: `${import.meta.env.BASE_URL}resume/Madelein-Jordaan-Resume.pdf`,
   summary:
     "Highly adaptable, analytical, and execution-focused Technical Engineer specializing in AI Integration, Workflow Automation, and Full-Stack Engineering. Proven track record of bridging high-level business strategy with robust technical execution — designing structured multi-step AI agents, orchestrating complex BPMN 2.0 architectures, and optimizing high-performance frontend applications.",
 }

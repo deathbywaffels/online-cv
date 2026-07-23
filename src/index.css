@@ -176,6 +176,9 @@ ul {
   border-radius: 999px;
   font-weight: 600;
   font-size: 14px;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
   transition: transform 0.15s ease, opacity 0.15s ease;
 }
 
@@ -249,6 +252,269 @@ ul {
   height: 6px;
   border-radius: 50%;
   background: var(--gradient);
+}
+
+/* ---------- Showcase / demos ---------- */
+
+.section-intro {
+  color: var(--muted);
+  font-size: 16px;
+  margin-bottom: 32px;
+  max-width: 65ch;
+}
+
+.demo-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.demo-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 28px;
+}
+
+.demo-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 240px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.demo-card-head h3 {
+  font-size: 19px;
+  margin-bottom: 8px;
+}
+
+.demo-card-head p {
+  color: var(--muted);
+  font-size: 14.5px;
+  max-width: 65ch;
+  margin: 0 0 20px;
+}
+
+.demo-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--muted);
+  padding: 12px 18px;
+}
+
+.btn-ghost:hover {
+  color: var(--text);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.demo-console {
+  margin-top: 18px;
+  padding: 12px 16px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 13.5px;
+  color: var(--accent-2);
+  min-height: 20px;
+}
+
+/* BPMN diagram */
+
+.bpmn-svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.bpmn-task {
+  fill: var(--bg-alt);
+  stroke: var(--muted);
+  stroke-opacity: 0.5;
+  stroke-width: 1.5;
+  transition: stroke 0.3s ease, stroke-opacity 0.3s ease, filter 0.3s ease;
+}
+
+.bpmn-task.is-active {
+  stroke: var(--accent-2);
+  stroke-opacity: 1;
+  stroke-width: 2;
+  filter: drop-shadow(0 0 6px rgba(71, 191, 255, 0.35));
+}
+
+.bpmn-event {
+  fill: var(--bg-alt);
+  stroke: var(--muted);
+  stroke-opacity: 0.5;
+  transition: stroke 0.3s ease, stroke-opacity 0.3s ease, filter 0.3s ease;
+}
+
+.bpmn-event-start {
+  stroke-width: 2;
+}
+
+.bpmn-event-end {
+  stroke-width: 4;
+}
+
+.bpmn-event.is-active {
+  stroke: var(--accent-2);
+  stroke-opacity: 1;
+  filter: drop-shadow(0 0 6px rgba(71, 191, 255, 0.35));
+}
+
+.bpmn-gateway {
+  fill: var(--bg-alt);
+  stroke: var(--muted);
+  stroke-opacity: 0.5;
+  stroke-width: 1.5;
+  transition: stroke 0.3s ease, stroke-opacity 0.3s ease, filter 0.3s ease;
+}
+
+.bpmn-gateway.is-active {
+  stroke: var(--accent);
+  stroke-opacity: 1;
+  stroke-width: 2;
+  filter: drop-shadow(0 0 6px rgba(124, 92, 255, 0.4));
+}
+
+.bpmn-gateway-mark {
+  fill: var(--muted);
+  font-size: 20px;
+  text-anchor: middle;
+  dominant-baseline: middle;
+  pointer-events: none;
+}
+
+.bpmn-label {
+  fill: var(--muted);
+  font-size: 11px;
+  text-anchor: middle;
+}
+
+.bpmn-task-label {
+  fill: var(--text);
+  font-size: 12px;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+.bpmn-branch-label {
+  fill: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+  text-anchor: middle;
+}
+
+.bpmn-branch-label.is-active {
+  fill: var(--accent-2);
+}
+
+.bpmn-edge {
+  stroke: var(--muted);
+  stroke-opacity: 0.4;
+  stroke-width: 2;
+  transition: stroke 0.3s ease, stroke-opacity 0.3s ease;
+}
+
+.bpmn-edge.is-active {
+  stroke: var(--accent-2);
+  stroke-opacity: 1;
+}
+
+.bpmn-arrow-idle {
+  fill: var(--muted);
+  opacity: 0.4;
+}
+
+.bpmn-arrow-active {
+  fill: var(--accent-2);
+}
+
+.bpmn-token {
+  fill: var(--accent-2);
+  filter: drop-shadow(0 0 8px rgba(71, 191, 255, 0.8));
+  transition: cx 0.75s cubic-bezier(0.65, 0, 0.35, 1), cy 0.75s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* D3 chart */
+
+.chart-wrap {
+  position: relative;
+}
+
+.chart-svg {
+  width: 100%;
+  height: auto;
+}
+
+.chart-axis text {
+  fill: var(--muted);
+  font-size: 11px;
+}
+
+.chart-axis path,
+.chart-axis line {
+  stroke: var(--border);
+}
+
+.chart-grid line {
+  stroke: var(--border);
+  stroke-opacity: 0.6;
+}
+
+.chart-grid path {
+  display: none;
+}
+
+.chart-dot {
+  cursor: pointer;
+}
+
+.chart-tooltip {
+  position: absolute;
+  transform: translate(-50%, -120%);
+  background: var(--bg);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12.5px;
+  color: var(--text);
+  pointer-events: none;
+  white-space: nowrap;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* Three.js canvas */
+
+.three-canvas {
+  width: 100%;
+  height: 340px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 40%, rgba(124, 92, 255, 0.12), transparent 70%), var(--bg);
+  cursor: grab;
+  touch-action: none;
+}
+
+.three-canvas:active {
+  cursor: grabbing;
+}
+
+.three-canvas canvas {
+  display: block;
 }
 
 /* ---------- Experience timeline ---------- */
@@ -451,4 +717,108 @@ ul {
   .section {
     padding: 64px 20px;
   }
+}
+
+/* ---------- Print résumé ---------- */
+
+.print-only {
+  display: none;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block;
+  }
+
+  @page {
+    margin: 18mm 16mm;
+  }
+
+  body {
+    background: #fff;
+    color: #111;
+  }
+}
+
+.print-resume {
+  font-family: var(--sans);
+  color: #111;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.print-header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.print-header h1 {
+  font-size: 26px;
+  color: #111;
+}
+
+.print-title {
+  font-weight: 600;
+  margin: 4px 0;
+}
+
+.print-contact {
+  font-size: 12px;
+  color: #444;
+}
+
+.print-section {
+  margin-bottom: 16px;
+  break-inside: avoid;
+}
+
+.print-section h2 {
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.print-section p,
+.print-section li {
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+.print-skill-group {
+  margin: 0 0 4px;
+}
+
+.print-entry {
+  margin-bottom: 12px;
+  break-inside: avoid;
+}
+
+.print-entry-head {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.print-entry-sub {
+  color: #444;
+  font-size: 12px;
+  margin: 2px 0 6px;
+}
+
+.print-entry ul,
+.print-section > ul {
+  padding-left: 18px;
+  list-style: disc;
+}
+
+.print-entry li {
+  margin-bottom: 3px;
 }

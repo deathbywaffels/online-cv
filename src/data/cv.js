@@ -16,17 +16,17 @@ export const skillGroups = [
     title: 'Process Automation & Backend',
     skills: [
       'BPMN 2.0 (Flowable Orchestration)',
-      'JavaScript (ES6+), Node.js, Python, C++',
+      'JavaScript (ES6+), Node.js, Express, Python, C++',
       'GraphQL & RESTful API Architecture',
-      'Relational Databases (Oracle SQL, MySQL, MongoDB)',
-      'DevOps (Linux VPS, Server Stack Setup)',
+      'Relational Databases (PostgreSQL, Oracle SQL, MySQL, MongoDB)',
+      'DevOps (Docker, Linux VPS, Server Stack Setup)',
     ],
   },
   {
     title: 'Frontend & Graphics',
     skills: [
-      'React, Redux, TypeScript, Tailwind CSS',
-      'Material UI, Bootstrap, Sass',
+      'React, Redux, React Native, TypeScript, Tailwind CSS',
+      'Material UI, Bootstrap, Sass, Framer Motion',
       '3D Graphics (WebGL, Three.js)',
       'Data Visualization (D3.js, Chart.js, ApexCharts, Grafana)',
       'Desktop UI Layout (Qt Designer)',
@@ -37,16 +37,16 @@ export const skillGroups = [
     skills: [
       'Custom Claude agents for QA, evaluation & ticket automation',
       'LLM API integration (bring-your-own-API-key architecture)',
+      'Multimodal AI integration (Google Gemini Vision)',
       'AI proof-of-concept development for enterprise clients',
-      'Personal project: AI-powered job-matching tool with CV parsing (bring-your-own-API-key architecture)',
     ],
   },
   {
     title: 'Additional Tools & Platforms',
     skills: [
       'C#, Delphi',
-      'Firebase',
-      'Unity, Unreal Engine',
+      'Firebase, Prisma ORM',
+      'Unity, Unreal Engine, Godot',
       'PyTorch',
       'Git, GitHub, GitLab',
     ],
@@ -105,7 +105,8 @@ export const experience = [
     period: 'January 2023 – June 2024',
     points: [
       'Developed and shipped production applications by designing logical workflows using BPMN 2.0 / Flowable engines integrated via JavaScript, HTML, CSS, and GraphQL.',
-      "Customized core modules inside the company's proprietary platform, Affectli, for tailored client business architecture.",
+      "Built a NOC and customer incident management application for a major European telecommunications company, using the company's proprietary Affectli platform.",
+      'Built an IT ticketing system and a water quality monitoring application for an Australian water utility company.',
       'Engineered live monitoring data visualizations using Grafana to showcase operational metrics to clients.',
       'Assisted with training, code review, and operational onboarding of newly recruited Business Process Engineers.',
     ],
@@ -127,7 +128,7 @@ export const education = [
     institution: 'University of South Africa (UNISA)',
     period: 'Expected Graduation: November 2026',
     details:
-      'Rigorous, highly mathematical distance-learning computer science track, maintained part-time alongside full-time software engineering work. Currently finishing final subjects.',
+      'Rigorous, highly mathematical distance-learning computer science track, maintained part-time alongside full-time software engineering work. Currently completing the final 2 subjects.',
     highlights: [
       'Software Engineering & Architecture: Advanced Object-Oriented Analysis, Data Structures (C++/Qt), Systems Development, Software Project Management, Human-Computer Interaction I & II.',
       'Infrastructure, AI & Visual Math: Computer Graphics (WebGL/Three.js render pipelines), Advanced Database Design (Oracle SQL I–III), Computer Networks, Techniques of Artificial Intelligence, Linear Algebra, Formal Logic, Theoretical Computer Science.',
@@ -144,18 +145,28 @@ export const education = [
 
 export const achievements = [
   {
-    title: 'Grand Prize Winner — Petronas Fluid Art Movement',
+    title: 'Grand Prize Winner, South Africa — Petronas Fluid Art Movement',
     description:
-      'Ranked top competitor across the African continent in an international digital engineering design project; selected for an official design tour in New York City and Montreal.',
+      "Won the national round of Petronas' Fluid Art Movement digital engineering design competition; awarded an all-expenses-paid trip to New York City and Montreal, including attending the Grand Prix.",
   },
   {
     title: 'Government Security Vetting',
     description:
-      'Successfully completed a comprehensive background verification process conducted by the South African State Security Agency (SSA).',
+      'Successfully completed a comprehensive background verification process conducted by a highly established South African government security agency.',
   },
   {
     title: 'International Logistics Volunteerism',
     description:
       'Deployed to remote areas in Malawi to coordinate logistical resource routing and nutritional planning for vulnerable youth centers under constrained infrastructure.',
+  },
+  {
+    title: 'Self-Taught Linux Server Administration',
+    description:
+      'Started by running community Minecraft, Teeworlds, and ARK servers on MWEB GameZone; grew this into independently hosting and maintaining Linux VPS game servers for friends and South African players.',
+  },
+  {
+    title: 'Volunteer Educator',
+    description:
+      'Taught weekly Sunday school classes, developing structured lesson plans and communication skills for diverse age groups.',
   },
 ]

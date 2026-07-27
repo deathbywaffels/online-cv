@@ -5,7 +5,7 @@ function Experience() {
   return (
     <section id="experience" className="section">
       <Reveal as="h2" className="section-title">
-        <span className="section-index">04</span> Experience
+        <span className="section-index">05</span> Experience
       </Reveal>
       <div className="timeline">
         {experience.map((job, i) => (

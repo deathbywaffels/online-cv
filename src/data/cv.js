@@ -5,6 +5,8 @@ export const profile = {
   workAuth: 'Authorized to work in Malta (Single Permit holder)',
   email: 'madeleinjordaan92@gmail.com',
   linkedin: 'https://www.linkedin.com/in/madelein-jordaan-6b7757218',
+  siteUrl: 'https://deathbywaffels.github.io/online-cv/',
+  github: 'https://github.com/deathbywaffels',
   summary:
     "Highly adaptable, analytical, and execution-focused engineer specializing in Front-End Development, Business Process Automation, and AI Integration. Proven track record of bridging high-level business strategy with robust technical execution — orchestrating complex BPMN 2.0 architectures, building high-performance React applications, and developing custom AI agents and proof-of-concept tools that extend team capacity and demonstrate automation opportunities to clients.",
 }
@@ -48,6 +50,26 @@ export const skillGroups = [
       'PyTorch',
       'Git, GitHub, GitLab',
     ],
+  },
+]
+
+export const projects = [
+  {
+    title: 'Open Pipeline',
+    description:
+      "A two-sided job-search platform — candidates manage their own application pipeline, employers manage their own candidate pipeline. Sourcing and AI-assisted matching (bring-your-own Anthropic API key) feed each side's board rather than being the product itself.",
+    stack: ['React 19', 'Node.js / Express', 'PostgreSQL (Prisma)', 'Docker', 'Anthropic API'],
+    github: 'https://github.com/deathbywaffels/open-pipeline',
+  },
+  {
+    title: 'This Site',
+    description:
+      'The CV site you\'re looking at right now — hand-built with React, a custom SVG workflow animation, D3.js, and a from-scratch Three.js WebGL scene, no charting or animation libraries beyond those two.',
+    stack: ['React', 'D3.js', 'Three.js', 'Vite'],
+    github: 'https://github.com/deathbywaffels/online-cv',
+    // Self-referential on the live site (nice touch, visitor is already
+    // looking at it) but redundant/space-wasting on a printed résumé.
+    includeInResume: false,
   },
 ]
 

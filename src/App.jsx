@@ -2,6 +2,7 @@ import Header from './components/Header'
 import Summary from './components/Summary'
 import Skills from './components/Skills'
 import Showcase from './components/Showcase'
+import Projects from './components/Projects'
 import Experience from './components/Experience'
 import Education from './components/Education'
 import Achievements from './components/Achievements'
@@ -17,6 +18,7 @@ function App() {
           <Summary />
           <Skills />
           <Showcase />
+          <Projects />
           <Experience />
           <Education />
           <Achievements />

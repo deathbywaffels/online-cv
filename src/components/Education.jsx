@@ -5,7 +5,7 @@ function Education() {
   return (
     <section id="education" className="section">
       <Reveal as="h2" className="section-title">
-        <span className="section-index">05</span> Education
+        <span className="section-index">06</span> Education
       </Reveal>
       <div className="edu-list">
         {education.map((item, i) => (

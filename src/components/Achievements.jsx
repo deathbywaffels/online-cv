@@ -5,7 +5,7 @@ function Achievements() {
   return (
     <section id="achievements" className="section">
       <Reveal as="h2" className="section-title">
-        <span className="section-index">06</span> Achievements
+        <span className="section-index">07</span> Achievements
       </Reveal>
       <div className="achievements-grid">
         {achievements.map((item, i) => (

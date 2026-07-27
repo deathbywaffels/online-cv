@@ -1,6 +1,7 @@
 import {
   profile,
   skillGroups,
+  projects,
   experience,
   education,
   achievements,
@@ -42,7 +43,8 @@ function PrintResume() {
         <ul className="resume-contact">
           <li><ResumeIcon name="pin" />{profile.location}</li>
           <li><ResumeIcon name="mail" />{profile.email}</li>
-          <li><ResumeIcon name="link" />{profile.linkedin.replace('https://www.', '')}</li>
+          <li><ResumeIcon name="link" /><a href={profile.linkedin}>{profile.linkedin.replace('https://www.', '')}</a></li>
+          <li><ResumeIcon name="link" /><a href={profile.siteUrl}>{profile.siteUrl.replace('https://', '').replace(/\/$/, '')}</a></li>
         </ul>
       </header>
 
@@ -80,6 +82,21 @@ function PrintResume() {
                     <li key={point}>{point}</li>
                   ))}
                 </ul>
+              </div>
+            ))}
+          </section>
+
+          <section className="resume-section">
+            <h2>Projects</h2>
+            {projects.filter((project) => project.includeInResume !== false).map((project) => (
+              <div className="resume-entry" key={project.title}>
+                <div className="resume-entry-head">
+                  <strong>{project.title}</strong>
+                  <a href={project.github} className="resume-project-link">
+                    {project.github.replace('https://', '')}
+                  </a>
+                </div>
+                <p>{project.description}</p>
               </div>
             ))}
           </section>

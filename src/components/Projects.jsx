@@ -1,5 +1,12 @@
 import { projects } from '../data/cv'
 import Reveal from './Reveal'
+import DualTrackDemo from './projects/DualTrackDemo'
+import GlimmerDemo from './projects/GlimmerDemo'
+
+const DEMOS = {
+  dualtrack: DualTrackDemo,
+  glimmer: GlimmerDemo,
+}
 
 function Projects() {
   return (
@@ -12,25 +19,35 @@ function Projects() {
       </Reveal>
 
       <div className="projects-grid">
-        {projects.map((project, i) => (
-          <Reveal key={project.title} as="article" className="project-card" delay={i * 80}>
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-            <div className="project-tags">
-              {project.stack.map((tech) => (
-                <span key={tech} className="project-tag">{tech}</span>
-              ))}
-            </div>
-            <a
-              className="project-link"
-              href={project.github}
-              target="_blank"
-              rel="noreferrer"
-            >
-              View on GitHub →
-            </a>
-          </Reveal>
-        ))}
+        {projects.map((project, i) => {
+          const Demo = DEMOS[project.demo]
+          return (
+            <Reveal key={project.title} as="article" className="project-card" delay={i * 80}>
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+              {Demo && (
+                <div className="project-demo">
+                  <Demo />
+                </div>
+              )}
+              <div className="project-tags">
+                {project.stack.map((tech) => (
+                  <span key={tech} className="project-tag">{tech}</span>
+                ))}
+              </div>
+              {project.github && (
+                <a
+                  className="project-link"
+                  href={project.github}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View on GitHub →
+                </a>
+              )}
+            </Reveal>
+          )
+        })}
       </div>
     </section>
   )

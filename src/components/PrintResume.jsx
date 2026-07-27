@@ -92,9 +92,11 @@ function PrintResume() {
               <div className="resume-entry" key={project.title}>
                 <div className="resume-entry-head">
                   <strong>{project.title}</strong>
-                  <a href={project.github} className="resume-project-link">
-                    {project.github.replace('https://', '')}
-                  </a>
+                  {project.github && (
+                    <a href={project.github} className="resume-project-link">
+                      {project.github.replace('https://', '')}
+                    </a>
+                  )}
                 </div>
                 <p>{project.description}</p>
               </div>

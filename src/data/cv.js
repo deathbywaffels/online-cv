@@ -55,11 +55,19 @@ export const skillGroups = [
 
 export const projects = [
   {
-    title: 'Open Pipeline',
+    title: 'DualTrack',
     description:
       "A two-sided job-search platform — candidates manage their own application pipeline, employers manage their own candidate pipeline. Sourcing and AI-assisted matching (bring-your-own Anthropic API key) feed each side's board rather than being the product itself.",
     stack: ['React 19', 'Node.js / Express', 'PostgreSQL (Prisma)', 'Docker', 'Anthropic API'],
     github: 'https://github.com/deathbywaffels/open-pipeline',
+    demo: 'dualtrack',
+  },
+  {
+    title: 'Glimmer',
+    description:
+      'A mobile app that turns a photo of a messy room into a cleaning checklist — Gemini Vision analyzes the image, generates the tasks, then verifies completion from a second photo. Bring-your-own Gemini API key, key stored on-device only.',
+    stack: ['React Native (Expo)', 'Google Gemini API', 'Firebase'],
+    demo: 'glimmer',
   },
   {
     title: 'This Site',

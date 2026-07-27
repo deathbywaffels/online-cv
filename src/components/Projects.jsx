@@ -35,16 +35,28 @@ function Projects() {
                   <span key={tech} className="project-tag">{tech}</span>
                 ))}
               </div>
-              {project.github && (
-                <a
-                  className="project-link"
-                  href={project.github}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  View on GitHub →
-                </a>
-              )}
+              <div className="project-links">
+                {project.live && (
+                  <a
+                    className="project-link"
+                    href={project.live}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Try it live →
+                  </a>
+                )}
+                {project.github && (
+                  <a
+                    className="project-link"
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    View on GitHub →
+                  </a>
+                )}
+              </div>
             </Reveal>
           )
         })}

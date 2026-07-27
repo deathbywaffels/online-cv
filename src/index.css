@@ -935,11 +935,17 @@ ul {
   padding: 3px 10px;
 }
 
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-self: flex-start;
+}
+
 .project-link {
   font-size: 13.5px;
   font-weight: 600;
   color: var(--accent-2);
-  align-self: flex-start;
 }
 
 .project-link:hover {

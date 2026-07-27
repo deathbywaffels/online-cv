@@ -68,6 +68,7 @@ export const projects = [
       'A mobile app that turns a photo of a messy room into a cleaning checklist — Gemini Vision analyzes the image, generates the tasks, then verifies completion from a second photo. Bring-your-own Gemini API key, key stored on-device only.',
     stack: ['React Native (Expo)', 'Google Gemini API', 'Firebase'],
     demo: 'glimmer',
+    live: 'https://glimmer-cleaning-demo.netlify.app',
   },
   {
     title: 'This Site',

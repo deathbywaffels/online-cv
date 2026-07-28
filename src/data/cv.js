@@ -71,15 +71,6 @@ export const projects = [
     live: 'https://glimmer-cleaning-demo.netlify.app',
   },
   {
-    title: 'Send It Back',
-    description:
-      "A browser arcade game — plate a dish, race it to the pass window, and watch a food critic find an increasingly absurd reason to send it back. Dodge a rival cook who'll happily serve your dish as their own.",
-    stack: ['JavaScript', 'HTML5 Canvas'],
-    github: 'https://github.com/deathbywaffels/send-it-back',
-    live: 'https://deathbywaffels.github.io/send-it-back/',
-    demo: 'senditback',
-  },
-  {
     title: 'This Site',
     description:
       'The CV site you\'re looking at right now — hand-built with React, a custom SVG workflow animation, D3.js, and a from-scratch Three.js WebGL scene, no charting or animation libraries beyond those two.',

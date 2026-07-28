@@ -71,6 +71,15 @@ export const projects = [
     live: 'https://glimmer-cleaning-demo.netlify.app',
   },
   {
+    title: 'Arcane Vigil',
+    description:
+      'A browser wave-survival shooter — mobs descend from the top of the arena while you hold the ground below, jump-dodging and firing real, traveling projectiles. Clear waves for perks, drop bosses for Blue Essence, and spend it in a hub on new staves and permanent upgrades.',
+    stack: ['JavaScript', 'HTML5 Canvas'],
+    github: 'https://github.com/deathbywaffels/arcane-vigil',
+    live: 'https://deathbywaffels.github.io/arcane-vigil/',
+    demo: 'arcanevigil',
+  },
+  {
     title: 'This Site',
     description:
       'The CV site you\'re looking at right now — hand-built with React, a custom SVG workflow animation, D3.js, and a from-scratch Three.js WebGL scene, no charting or animation libraries beyond those two.',

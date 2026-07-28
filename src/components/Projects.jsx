@@ -2,12 +2,10 @@ import { projects } from '../data/cv'
 import Reveal from './Reveal'
 import DualTrackDemo from './projects/DualTrackDemo'
 import GlimmerDemo from './projects/GlimmerDemo'
-import VarNationDemo from './projects/VarNationDemo'
 
 const DEMOS = {
   dualtrack: DualTrackDemo,
   glimmer: GlimmerDemo,
-  varnation: VarNationDemo,
 }
 
 function Projects() {

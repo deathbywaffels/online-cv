@@ -82,7 +82,7 @@ export const projects = [
   {
     title: 'This Site',
     description:
-      'The CV site you\'re looking at right now — hand-built with React, a custom SVG workflow animation, D3.js, and a from-scratch Three.js WebGL scene, no charting or animation libraries beyond those two.',
+      'The CV site you\'re looking at right now — built with React, a custom SVG workflow animation, D3.js, and a from-scratch Three.js WebGL scene, no charting or animation libraries beyond those two.',
     stack: ['React', 'D3.js', 'Three.js', 'Vite'],
     github: 'https://github.com/deathbywaffels/online-cv',
     // Self-referential on the live site (nice touch, visitor is already

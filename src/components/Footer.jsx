@@ -15,6 +15,7 @@ function Footer() {
       <p className="footer-copy">
         &copy; {year} {profile.name}
       </p>
+      <p className="footer-disclaimer">Built with AI assistance as part of its development.</p>
     </footer>
   )
 }

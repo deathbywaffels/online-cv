@@ -46,7 +46,7 @@ export const skillGroups = [
     skills: [
       'C#, Delphi',
       'Firebase, Prisma ORM',
-      'Unity, Unreal Engine, Godot',
+      'Unity, Unreal Engine, Godot, Kaplay.js',
       'PyTorch',
       'Git, GitHub, GitLab',
     ],
@@ -69,6 +69,15 @@ export const projects = [
     stack: ['React Native (Expo)', 'Google Gemini API', 'Firebase'],
     demo: 'glimmer',
     live: 'https://glimmer-cleaning-demo.netlify.app',
+  },
+  {
+    title: 'VAR Nation',
+    description:
+      "A browser arcade game — score against Argentina, then watch VAR find an increasingly absurd reason to disallow it. Prototyped the core loop in Kaplay.js, then rebuilt dependency-free in vanilla JS/Canvas to add power-ups, referee events, and a full win condition.",
+    stack: ['JavaScript', 'HTML5 Canvas', 'Kaplay.js (prototype)'],
+    github: 'https://github.com/deathbywaffels/var-nation',
+    live: 'https://deathbywaffels.github.io/var-nation/',
+    demo: 'varnation',
   },
   {
     title: 'This Site',

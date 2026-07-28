@@ -44,7 +44,7 @@ function PrintResume() {
           <li><ResumeIcon name="pin" />{profile.location}</li>
           <li><ResumeIcon name="mail" />{profile.email}</li>
           <li><ResumeIcon name="link" /><a href={profile.linkedin}>{profile.linkedin.replace('https://www.', '')}</a></li>
-          <li><ResumeIcon name="link" /><a href={profile.siteUrl}>{profile.siteUrl.replace('https://', '').replace(/\/$/, '')}</a></li>
+          <li><ResumeIcon name="link" /><a href={profile.siteUrl}>See this CV in action → {profile.siteUrl.replace('https://', '').replace(/\/$/, '')}</a></li>
         </ul>
       </header>
 
